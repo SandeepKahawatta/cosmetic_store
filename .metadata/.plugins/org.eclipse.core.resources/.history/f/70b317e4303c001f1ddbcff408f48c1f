@@ -1,0 +1,59 @@
+package cosmatic_store;
+import java.util.Scanner;
+
+public class Manager extends User {
+
+    public Manager(String username, String password) {
+        super(username, password, "Manager");
+    }
+
+    @Override
+    public void displayMenu() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Manager Menu:");
+            System.out.println("1. View Products");
+            System.out.println("2. Add Product");
+            System.out.println("3. Logout");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    viewProducts();
+                    break;
+                case 2:
+                    addProduct();
+                    break;
+                case 3:
+                    System.out.println("Logging out...");
+                    return;
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
+    }
+
+    private void viewProducts() {
+        for (Product product : Main.products) {
+            System.out.println(product);
+        }
+    }
+
+    private void addProduct() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter product name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter product category: ");
+        String category = scanner.nextLine();
+        System.out.print("Enter product price: ");
+        double price = scanner.nextDouble();
+        System.out.print("Enter product stock: ");
+        int stock = scanner.nextInt();
+
+        Product product = new Product(name, category, price, stock);
+        Main.products.add(product);
+        System.out.println("Product added successfully!");
+    }
+}
+

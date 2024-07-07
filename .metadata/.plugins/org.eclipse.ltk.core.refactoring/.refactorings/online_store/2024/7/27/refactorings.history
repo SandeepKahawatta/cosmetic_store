@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;cosmatic_store.RegisterdCustomer.java&apos; to &apos;RegisteredCustomer.java&apos;&#x0D;&#x0A;- Original project: &apos;online_store&apos;&#x0D;&#x0A;- Original element: &apos;cosmatic_store.RegisterdCustomer.java&apos;&#x0D;&#x0A;- Renamed element: &apos;cosmatic_store.RegisteredCustomer.java&apos;" description="Rename compilation unit &apos;RegisterdCustomer.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;cosmatic_store{RegisterdCustomer.java" name="RegisteredCustomer.java" references="false" stamp="1720335340499" version="1.0"/>
+</session>

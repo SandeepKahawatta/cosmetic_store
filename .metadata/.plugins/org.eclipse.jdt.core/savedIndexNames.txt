@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\sande\OneDrive\Desktop\sasa _new\.metadata\.plugins\org.eclipse.jdt.core
+662278605.index
+1865797976.index
+12815110.index

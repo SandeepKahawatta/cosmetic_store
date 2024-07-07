@@ -1,0 +1,39 @@
+package cosmatic_store;
+import java.util.Scanner;
+
+public class GuestCustomer extends User {
+
+    public GuestCustomer(String username, String password) {
+        super(username, password, "GuestCustomer");
+    }
+
+    @Override
+    public void displayMenu() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Guest Customer Menu:");
+            System.out.println("1. View Products");
+            System.out.println("2. Logout");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    viewProducts();
+                    break;
+                case 2:
+                    System.out.println("Logging out...");
+                    return;
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
+    }
+
+    private void viewProducts() {
+        for (Product product : Main.products) {
+            System.out.println(product);
+        }
+    }
+}
+
